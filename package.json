@@ -1,0 +1,19 @@
+{
+  "name": "tp-link-api-demo",
+  "version": "1.0.0",
+  "description": "Demo for interacting with TP-Link smart home devices using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/athorsen/tp-link-api-demo.git"
+  },
+  "author": "Tony Thorsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/athorsen/tp-link-api-demo/issues"
+  },
+  "homepage": "https://github.com/athorsen/tp-link-api-demo"
+}
