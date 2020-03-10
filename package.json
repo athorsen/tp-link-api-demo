@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/athorsen/tp-link-api-demo/issues"
   },
-  "homepage": "https://github.com/athorsen/tp-link-api-demo"
+  "homepage": "https://github.com/athorsen/tp-link-api-demo",
+  "dependencies": {
+    "tplink-smarthome-api": "^2.0.0"
+  }
 }
