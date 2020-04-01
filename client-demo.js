@@ -2,20 +2,19 @@ const { Client } = require('tplink-smarthome-api');
 
 const client = new Client();
 
-// display device info when they're discovered
-// client.on('device-new', async device => {
-//     await device.getSysInfo()
-//         .then(info => {
-//             info = {
-//                 ...info,
-//                 on: device.relayState,
-//                 host: device.host
-//             }
-//             console.log(info)
-//         });
-// });
+//display device info when they're discovered
+client.on('device-new', async device => {
+    await device.getSysInfo()
+        .then(info => {
+            info = {
+                ...info,
+                on: device.relayState,
+                host: device.host
+            }
+            console.log(info)
+        });
+});
 
-// can't use 'switch' as variable name, because it conflicts with JavaScript keyword
 const hostIp = '<host IP address>';
 (async () => {
     let playroomLight = await client.getDevice({ host: hostIp })
@@ -91,4 +90,4 @@ const hostIp = '<host IP address>';
 
 // discover new devices
 // you can pass in an 'options' object to filter devices or contact certain devices directly (in addition to the broadcast)
-// client.startDiscovery();
+client.startDiscovery();
